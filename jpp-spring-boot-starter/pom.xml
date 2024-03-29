@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+    </parent>
+
+    <groupId>cc.wanforme</groupId>
+    <artifactId>jpp-spring-boot-starter</artifactId>
+    <version>0.0.1</version>
+    <description>A simple spring-boot supports for webview_java</description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <webview-java.version>652786b</webview-java.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>casterlabs-maven</id>
+            <url>https://repo.casterlabs.co/maven</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- necessary if spring-boot's configuration is *.yml or *.yaml -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- region webview-java -->
+        <!--<dependency>
+            <groupId>dev.webview.webview_java</groupId>
+            <artifactId>webview_java</artifactId
+            <version>20240220</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/test/resources/libs/core-PLACEHOLDER.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>dev.webview.webview_java</groupId>
+            <artifactId>bridge</artifactId>
+            <version>20240220</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/test/resources/libs/bridge-PLACEHOLDER.jar</systemPath>
+        </dependency>-->
+        <dependency>
+            <groupId>com.github.webview.webview_java</groupId>
+            <artifactId>core</artifactId>
+            <version>${webview-java.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.webview.webview_java</groupId>
+            <artifactId>bridge</artifactId>
+            <version>${webview-java.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>co.casterlabs.commons</groupId>
+            <artifactId>platform</artifactId>
+            <version>1.7.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>co.casterlabs.commons</groupId>
+            <artifactId>io</artifactId>
+            <version>1.7.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>co.casterlabs.commons</groupId>
+            <artifactId>async</artifactId>
+            <version>1.7.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>co.casterlabs</groupId>
+            <artifactId>rson</artifactId>
+            <version>1.17.9</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.14.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>5.14.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- endregion -->
+    </dependencies>
+
+</project>
