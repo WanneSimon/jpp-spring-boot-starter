@@ -14,7 +14,7 @@ logging:
     ROOT: info
 
 jpp-ms-webview:
-  # 自定义 ErrorController
+  # 自定义 ErrorViewResolver
   custom-error-resolver: false
   # 前端 url 根路径， 对应前端 VITE_FRONT_BASE
   front-base-url: /jpp

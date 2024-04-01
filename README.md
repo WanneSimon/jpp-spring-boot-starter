@@ -98,8 +98,8 @@ export default ({mode}) => {
 应用配置
 ``` yml
 jpp-ms-webview:
-  # 自定义 ErrorController
-  custom-error-controller: false
+  # 自定义 ErrorViewResolver
+  custom-error-resolver: false
   # 前端 url 根路径， 对应前端 VITE_FRONT_BASE
   front-base-url: /jpp
   # 前端打包文件位置 （/src/main/resources/static/dist/）
