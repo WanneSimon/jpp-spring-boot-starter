@@ -12,7 +12,7 @@
 
     <groupId>cc.wanforme</groupId>
     <artifactId>jpp-spring-boot-starter</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>jpp-spring-boot-starter</name>
     <description>A simple spring-boot supports for webview_java</description>

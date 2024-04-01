@@ -1,5 +1,5 @@
 cc.wanforme.mswebview.JppErrorConfiguration
-cc.wanforme.mswebview.JppErrorController
+cc.wanforme.mswebview.JppErrorViewResolver
 cc.wanforme.mswebview.MsWebviewProperties
 cc.wanforme.mswebview.UIController
 cc.wanforme.mswebview.UIServerHolder
