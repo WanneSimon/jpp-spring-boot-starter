@@ -128,3 +128,6 @@ jpp-ms-webview:
 
 `*nix` 系统参考 [webview2](https://github.com/webview/webview?tab=readme-ov-file#prerequisites)
 
+
+### 其它
+附 `ms webview2` + `spring-boot` + `javaFX` + `vue3` 开发的桌面小应用 [hi-there](https://github.com/WanneSimon/hi-there)
